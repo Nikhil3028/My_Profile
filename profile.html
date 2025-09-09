@@ -1,141 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nikhil Patidar | Profile</title>
+  <title>Nikhil Patidar | Portfolio</title>
   <style>
     body {
-      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f4f6fa;
       margin: 0;
       padding: 0;
-      background-color: #f4f6fa;
       color: #333;
     }
 
     .container {
-      max-width: 900px;
+      max-width: 1000px;
       margin: 40px auto;
       background: #fff;
-      border-radius: 16px;
-      box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
       overflow: hidden;
     }
 
-    /* Profile Header */
     .profile {
-      text-align: center;
-      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 20px;
       background: linear-gradient(135deg, #0077b6, #0096c7);
       color: white;
+      text-align: center;
     }
 
     .profile img {
-      width: 140px;
-      height: 140px;
+      width: 150px;
+      height: 150px;
       border-radius: 50%;
       border: 4px solid white;
-      margin-bottom: 15px;
+      margin-bottom: 20px;
     }
 
     .profile h1 {
-      margin: 10px 0 5px;
-      font-size: 28px;
+      font-size: 32px;
+      margin: 0;
     }
 
-    .profile p {
-      margin: 5px 0;
-      font-size: 15px;
+    .contact a {
+      color: #ffd166;
+      text-decoration: none;
     }
 
-    /* Section Styling */
     .section {
-      padding: 25px;
-      border-bottom: 1px solid #eee;
+      padding: 30px 20px;
     }
 
-    .section:last-child {
-      border-bottom: none;
-    }
-
-    h2 {
-      margin-bottom: 15px;
+    .section h2 {
+      border-left: 5px solid #0096c7;
+      padding-left: 10px;
       color: #0077b6;
-      font-size: 22px;
-      border-left: 4px solid #0096c7;
-      padding-left: 8px;
+      font-size: 24px;
+      margin-bottom: 20px;
     }
 
-    p {
-      line-height: 1.7;
-      font-size: 15px;
+    .about p {
+      line-height: 1.8;
+      font-size: 16px;
     }
 
-    /* Education & Skills List */
-    ul {
+    .grid {
+      display: grid;
+      gap: 20px;
+    }
+
+    .education-list,
+    .skills-list {
       list-style: none;
       padding: 0;
+      display: grid;
+      gap: 15px;
     }
 
-    ul li {
+    .education-list li,
+    .skills-list li {
       background: #f0f4f8;
-      margin: 8px 0;
-      padding: 12px;
+      padding: 15px;
       border-radius: 8px;
-      transition: 0.3s ease;
+      transition: transform 0.3s ease, background 0.3s ease;
     }
 
-    ul li:hover {
+    .education-list li:hover,
+    .skills-list li:hover {
       background: #e0f2fe;
-      transform: scale(1.02);
+      transform: translateY(-4px);
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      color: #777;
+    }
+
+    @media (min-width: 768px) {
+      .profile {
+        flex-direction: row;
+        text-align: left;
+        justify-content: center;
+      }
+
+      .profile img {
+        margin-right: 30px;
+      }
     }
   </style>
 </head>
+
 <body>
   <div class="container">
-    <!-- Profile Section -->
     <div class="profile">
-      <img src="nikhil.jpeg" alt="Profile Picture">
-      <h1>Nikhil Patidar</h1>
-      <p>Email: <a href="mailto:Nikpatidar333@gmail.com" style="color:#ffd166;">Nikpatidar333@gmail.com</a></p>
-      <p>Phone: +91 9340576071</p>
+      <img src="nikhil.jpeg" alt="Nikhil Patidar">
+      <div>
+        <h1>Nikhil Patidar</h1>
+        <p>Email: <a href="mailto:Nikpatidar333@gmail.com">Nikpatidar333@gmail.com</a></p>
+        <p>Phone: +91 9340576071</p>
+      </div>
     </div>
 
-    <!-- About Me Section -->
     <div class="section about">
       <h2>About Me</h2>
-      <p>
-        I am currently pursuing my <strong>M.Tech at IIIT Hyderabad</strong>, specializing in advanced computer science and engineering. 
-        With a strong academic foundation and a passion for research and innovation, I am deeply interested in exploring 
-        emerging technologies and applying them to solve real-world challenges.
-      </p>
-      <p>
-        My academic journey has shaped me into a disciplined learner with a strong problem-solving mindset. 
-        Beyond academics, I enjoy working on projects that blend creativity with technology, and I look forward 
-        to contributing to impactful research and industry advancements.
-      </p>
+      <p>I am currently pursuing my <strong>M.Tech at IIIT Hyderabad</strong>, specializing in advanced computer science and engineering. Passionate about research, innovation, and solving real-world problems using emerging technologies.</p>
+      <p>I enjoy combining creativity and technology in projects and strive to contribute meaningfully to both research and industry advancements.</p>
     </div>
 
-    <!-- Education Section -->
     <div class="section education">
       <h2>Education</h2>
-      <ul>
+      <ul class="education-list">
         <li><strong>10th:</strong> Sandipani Academy, 2019</li>
         <li><strong>12th:</strong> Excellent Academy Mandleshwar, 2021</li>
-        <li><strong>Graduation:</strong> B.Tech, BUIT, 2021–2024</li>
-        <li><strong>Master’s:</strong> M.Tech, IIIT Hyderabad, 2025–2027</li>
+        <li><strong>B.Tech:</strong> BUIT, 2021–2024</li>
+        <li><strong>M.Tech:</strong> IIIT Hyderabad, 2025–2027</li>
       </ul>
     </div>
 
-    <!-- Skills Section -->
     <div class="section skills">
       <h2>Skills</h2>
-      <ul>
+      <ul class="skills-list">
         <li>C, C++</li>
         <li>Problem Solving</li>
         <li>Teamwork & Communication</li>
       </ul>
     </div>
   </div>
+
+  <footer>
+    &copy; 2025 Nikhil Patidar. All Rights Reserved.
+  </footer>
 </body>
+
 </html>
